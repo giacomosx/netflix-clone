@@ -4,33 +4,33 @@
 }
 
 @font-face {
-    font-family: 'NeflixSans-Regular';
+    font-family: 'NetflixSans-Regular';
     src: url('../assets/fonts/NetflixSans-Regular.woff2') format('woff2');
     font-weight: normal;
 }
 @font-face {
-    font-family: 'NeflixSans-Bold';
+    font-family: 'NetflixSans-Bold';
     src: url('../assets/fonts/NetflixSans-Bold.woff2') format('woff2');
     font-weight: bold;
 }
 @font-face {
-    font-family: 'NeflixSans-Regular';
+    font-family: 'NetflixSans-Regular';
     src: url('../assets/fonts/NetflixSans-Light.woff2') format('woff2');
     font-weight: lighter;
 }
 
 body {
-    font-family: 'NeflixSans-Regular', sans-serif;
+    font-family: 'NetflixSans-Regular', sans-serif;
     color: var(--text-white);
     background-color: var(--bg--black);
 }
 
 .h5, .h2 {
-    font-family: 'NeflixSans-Bold';
+    font-family: 'NetflixSans-Bold';
 }
 
 .logo {
-    width: 92px;
+    width: 110px;
 }
 
 .nav-link {
@@ -58,12 +58,25 @@ body {
     border-radius: 0;
 }
 
+
 .swiper {
     overflow: visible;
 }
 
 .swiper-slide img {
-    border-radius: 3px;
+    border-radius: 2px;
+    min-height: 130px;
+    object-position: left; 
+}
+
+.swiper-slide {
+    transition: all 500ms ease-out;
+}
+
+.swiper-slide:hover {
+    scale: 1.15;
+    z-index: 5;
+    box-shadow: 0 0 10px 2px var(--bg--black);
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -73,5 +86,5 @@ body {
 }
 
 .swiper-button-prev:hover, .swiper-button-next:hover {
-    opacity: 0.7!important;
+    opacity: 1!important;
 }
