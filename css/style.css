@@ -1,6 +1,7 @@
 :root {
     --bg--black: #141414;
-    --text-white: #f5f5f5;
+    --text--white: #f5f5f5;
+    --text--gray: #5A5A5A;
 }
 
 @font-face {
@@ -21,7 +22,7 @@
 
 body {
     font-family: 'NetflixSans-Regular', sans-serif;
-    color: var(--text-white);
+    color: var(--text--white);
     background-color: var(--bg--black);
 }
 
@@ -34,12 +35,12 @@ body {
 }
 
 .nav-link {
-    color: var(--text-white);
+    color: var(--text--white);
     transition: all 500ms;
 }
 
 .nav-link:hover {
-    color: var(--text-white);
+    color: var(--text--white);
     scale: 1.1;
 }
 
@@ -47,13 +48,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--text-white);
+    color: var(--text--white);
 }
 
 .form-select {
     padding: 5px;
     width: 7.5rem;
-    color: var(--text-white);
+    color: var(--text--white);
     background-color: var(--bg--black);
     border-radius: 0;
 }
@@ -80,11 +81,24 @@ body {
 }
 
 .swiper-button-prev, .swiper-button-next {
-    opacity: 0!important;
-    color: var(--text-white);
+    opacity: 0.6!important;
+    color: var(--text--white);
     transition: all 500ms;
 }
 
 .swiper-button-prev:hover, .swiper-button-next:hover {
+    scale: 1.25;
     opacity: 1!important;
+}
+
+footer {
+    color: var(--text--gray);
+}
+
+.footer__button {
+    border-color: var(--text--gray)!important;
+}
+
+.copy {
+    font-size: .75rem;
 }
