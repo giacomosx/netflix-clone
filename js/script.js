@@ -21,3 +21,26 @@ const swiper = new Swiper('.swiper', {
     grabCursor: true,
     loop: true
   });
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from('#newReleases', {
+  scrollTrigger: '#newReleases',
+  opacity: 0,
+  delay: 0.1
+});
+
+gsap.from('#upcoming', {
+  scrollTrigger: '#upcoming',
+  opacity: 0,
+  delay: 0.1
+});
+
+gsap.from('footer', {
+  scrollTrigger: 'footer',
+  opacity: 0,
+  delay: 0.1
+});
+
