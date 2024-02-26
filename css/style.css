@@ -9,11 +9,13 @@
     src: url('../assets/fonts/NetflixSans-Regular.woff2') format('woff2');
     font-weight: normal;
 }
+
 @font-face {
     font-family: 'NetflixSans-Bold';
     src: url('../assets/fonts/NetflixSans-Bold.woff2') format('woff2');
     font-weight: bold;
 }
+
 @font-face {
     font-family: 'NetflixSans-Regular';
     src: url('../assets/fonts/NetflixSans-Light.woff2') format('woff2');
@@ -26,7 +28,8 @@ body {
     background-color: var(--bg--black);
 }
 
-.h5, .h2 {
+.h5,
+.h2 {
     font-family: 'NetflixSans-Bold';
 }
 
@@ -59,15 +62,14 @@ body {
     border-radius: 0;
 }
 
-
 .swiper {
     overflow: visible;
 }
 
 .swiper-slide img {
-    border-radius: 2px;
+    border-radius: 3px;
     min-height: 130px;
-    object-position: left; 
+    object-position: left;
 }
 
 .swiper-slide {
@@ -82,15 +84,17 @@ body {
     box-shadow: 0 0 10px 2px var(--bg--black);
 }
 
-.swiper-button-prev, .swiper-button-next {
-    opacity: 0.6!important;
+.swiper-button-prev,
+.swiper-button-next {
+    opacity: 0.6 !important;
     color: var(--text--white);
     transition: all 500ms;
 }
 
-.swiper-button-prev:hover, .swiper-button-next:hover {
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
     scale: 1.25;
-    opacity: 1!important;
+    opacity: 1 !important;
 }
 
 footer {
@@ -98,45 +102,22 @@ footer {
 }
 
 .footer__button {
-    border-color: var(--text--gray)!important;
+    border-color: var(--text--gray) !important;
 }
 
 .copy {
     font-size: .75rem;
 }
 
-
 .caption {
     position: absolute;
-    background-color: hsla(0, 0%, 8%, 0.75);
-    top: -100%;
+    background-color: hsla(0, 0%, 8%, 0.8);
+    bottom: -100%;
     width: 100%;
     padding: 5px;
+    transition: all 500ms ease;
 }
 
-.fade-in {
-    animation: fadeIn 500ms ease-out forwards;
-}
-
-.fade-out {
-    animation: fadeOut 500ms ease-out forwards;
-}
-
-
-@keyframes fadeIn {
-    from {
-        top: -100%;
-    }
-    to {
-        top: 0;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        top: 0;
-    }
-    to {
-        top: -100%;
-    }
+.swiper-slide:hover .caption {
+    bottom: 0;
 }

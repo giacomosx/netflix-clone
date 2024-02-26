@@ -54,26 +54,14 @@ gsap.from('footer', {
 const card = document.querySelectorAll('.swiper-slide');
 
 card.forEach(card => {
-  card.addEventListener('mouseover', function(){
-    const captionContainer = document.createElement('div');
-    captionContainer.classList.add('caption');
-    const title = document.createElement('h4');
-    const description = document.createElement('p');
+  const captionContainer = document.createElement('div');
+  captionContainer.classList.add('caption');
+  const title = document.createElement('h5');
+  const description = document.createElement('p');
 
-    title.innerHTML = 'Lorem Ipsum';
-    description.innerHTML = 'Lorem Ipsum dolor sit amet';
+  title.innerHTML = 'Movie Title';
+  description.innerHTML = 'A simple description.';
 
-    captionContainer.classList.add('fade-in');
-
-    captionContainer.append(title, description);
-    card.append(captionContainer);
-  })
-})
-
-card.forEach(card => {
-  card.addEventListener('mouseout', function(){
-    const captionContainer = document.querySelector('.caption');
-
-    captionContainer.remove()
-  })
+  captionContainer.append(title, description);
+  card.append(captionContainer);
 })
