@@ -72,6 +72,8 @@ body {
 
 .swiper-slide {
     transition: all 500ms ease-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .swiper-slide:hover {
@@ -101,4 +103,40 @@ footer {
 
 .copy {
     font-size: .75rem;
+}
+
+
+.caption {
+    position: absolute;
+    background-color: hsla(0, 0%, 8%, 0.75);
+    top: -100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.fade-in {
+    animation: fadeIn 500ms ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 500ms ease-out forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        top: 0;
+    }
+    to {
+        top: -100%;
+    }
 }
